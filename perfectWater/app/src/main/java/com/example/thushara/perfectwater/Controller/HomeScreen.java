@@ -1,4 +1,4 @@
-package com.example.thushara.perfectwater;
+package com.example.thushara.perfectwater.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.thushara.perfectwater.R;
 
 public class HomeScreen extends AppCompatActivity {
 
