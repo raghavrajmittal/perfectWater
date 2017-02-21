@@ -35,9 +35,5 @@ public class HomeScreen extends AppCompatActivity {
         });
 
     }
-    public void logout(){
-        setContentView(R.layout.activity_login);
-    }
-
 
 }
