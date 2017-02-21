@@ -1,5 +1,6 @@
 package com.example.thushara.perfectwater;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,7 +14,7 @@ public class HomeScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_home_screen);
+        setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,14 +27,17 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new View.OnClickListener() {
+        Button logout_button = (Button) findViewById(R.id.home_screen_logout_button);
+        logout_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
-            }
+                startActivity(new Intent(HomeScreen.this, LoginActivity.class));            }
         });
 
     }
+    public void logout(){
+        setContentView(R.layout.activity_login);
+    }
+
 
 }
