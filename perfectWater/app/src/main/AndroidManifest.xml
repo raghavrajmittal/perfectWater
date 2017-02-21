@@ -30,6 +30,7 @@
             android:name=".Controller.EditProfile"
             android:label="EditProfile"
             android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

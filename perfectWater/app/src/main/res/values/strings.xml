@@ -14,6 +14,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
 tr    </string>
+    </string>
 
     <!-- Strings on home screen -->
     <string name="title_activity_home_screen">HomeScreen</string>
@@ -27,6 +28,7 @@ tr    </string>
     <string name="edit_screen_last_name">Last Name</string>>
     <string name="edit_screen_email">Email</string>>
 
+    <string name="title_activity_registration">Registration</string>
 
 </resources>
 
