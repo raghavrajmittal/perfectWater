@@ -20,5 +20,8 @@
     <string name="home_screen_logout_button">Log Out</string>
     <string name="title_activity_registration">Registration</string>
 
+    <!-- Strings on registration screen -->
+    <string name="register_button">Register!</string>
+
 </resources>
 
