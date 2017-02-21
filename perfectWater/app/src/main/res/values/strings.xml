@@ -6,7 +6,7 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="action_register_button">Register</string>
+    <string name="login_page_register_button">Register</string>
     <string name="error_invalid_email">This username is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This username and password combination is incorrect</string>
@@ -14,12 +14,11 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="title_activity_home_screen">HomeScreen</string>
-
-
 
     <!-- Strings on home screen -->
+    <string name="title_activity_home_screen">HomeScreen</string>
     <string name="home_screen_logout_button">Log Out</string>
+    <string name="title_activity_registration">Registration</string>
 
 </resources>
 
