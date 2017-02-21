@@ -6,10 +6,17 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.example.thushara.perfectwater.R;
 
+import model.UserType;
+
 public class RegistrationActivity extends AppCompatActivity {
+
+    private Spinner userTypeSpinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +25,11 @@ public class RegistrationActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        userTypeSpinner = (Spinner) findViewById(R.id.usertypeSpinner);
+
+        ArrayAdapter<UserType> userTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserType.values());
+        userTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        userTypeSpinner.setAdapter(userTypeAdapter);
     }
 
 }
