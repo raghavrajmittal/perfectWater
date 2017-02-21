@@ -22,6 +22,8 @@
 
     <!-- Strings on registration screen -->
     <string name="register_button">Register!</string>
+    <string name="prompt_name">Your Name</string>
+    <string name="action_name_short">Name</string>
 
 </resources>
 
