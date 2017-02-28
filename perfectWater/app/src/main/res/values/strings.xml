@@ -25,6 +25,7 @@
     <string name="prompt_name">Your Name</string>
     <string name="action_name_short">Name</string>
     <string name="select_user_type">Select User Type</string>
+    <string name="cancel_registration">Cancel</string>
 
 </resources>
 
