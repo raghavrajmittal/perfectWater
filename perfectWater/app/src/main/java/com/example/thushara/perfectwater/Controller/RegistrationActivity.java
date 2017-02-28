@@ -30,8 +30,8 @@ public class RegistrationActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //loads the spinners and sets the values in it
         userTypeSpinner = (Spinner) findViewById(R.id.usertypeSpinner);
-
         ArrayAdapter<UserType> userTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserType.values());
         userTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userTypeSpinner.setAdapter(userTypeAdapter);
@@ -50,28 +50,33 @@ public class RegistrationActivity extends AppCompatActivity {
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clearfields();
+                //clearfields();
+                finish();
+                startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
             }
         });
     }
 
+    // functionality when the "register" button is clicked
     private boolean register_new_user(){
-
         return true;
     }
 
+/*
+     *//**
+     * Clears all the fields of the fields on the registration screen
+     *//*
     private void clearfields(){
-//        EditText nameView = (EditText) findViewById(R.id.register_name);
-//        AutoCompleteTextView usernameView = (AutoCompleteTextView) findViewById(R.id.register_username);
-//        EditText passwordView = (EditText) findViewById(R.id.register_password);
-//
-//        Spinner userTypeView = (Spinner) findViewById(R.id.usertypeSpinner);
-//
-//        nameView.setText("");
-//        usernameView.setText("");
-//        passwordView.setText("");
-        finish();
-        startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
-    }
+        EditText nameView = (EditText) findViewById(R.id.register_name);
+        AutoCompleteTextView usernameView = (AutoCompleteTextView) findViewById(R.id.register_username);
+        EditText passwordView = (EditText) findViewById(R.id.register_password);
+
+        Spinner userTypeView = (Spinner) findViewById(R.id.usertypeSpinner);
+
+        nameView.setText("");
+        usernameView.setText("");
+        passwordView.setText("");
+
+    }*/
 
 }

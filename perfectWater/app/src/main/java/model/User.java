@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Created by raghavrajmittal on 21/02/17.
+ * A user object that contains all necessary information about the user
  */
 
 public class User {
@@ -14,6 +14,5 @@ public class User {
     private String homeAddress;
     private String emailAddress;
 
-
-
+    //make getters and setters for each, if somehow firebase doesn't work?
 }
