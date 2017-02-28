@@ -28,7 +28,7 @@ public class HomeScreen extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
+        //logout button functionality
         Button logout_button = (Button) findViewById(R.id.home_screen_logout_button);
         logout_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +37,16 @@ public class HomeScreen extends AppCompatActivity {
                 startActivity(new Intent(HomeScreen.this, LoginActivity.class));
             }
         });
+        //edit profile button functionality
+        Button edit_profile_button = (Button) findViewById(R.id.home_screen_edit_profile_button);
+        edit_profile_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeScreen.this, EditProfile.class));
+            }
+        }
+        );
+
 
     }
 

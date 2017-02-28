@@ -13,12 +13,20 @@
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
-    </string>
+tr    </string>
 
     <!-- Strings on home screen -->
     <string name="title_activity_home_screen">HomeScreen</string>
     <string name="home_screen_logout_button">Log Out</string>
     <string name="title_activity_registration">Registration</string>
+    <string name="home_screen_edit_profile_button">Edit Profile</string>>
+
+    <!-- Strings on edit profile screen -->
+    <string name="edit_screen_user_profile">User Profile</string>>
+    <string name="edit_screen_first_name">First Name</string>>
+    <string name="edit_screen_last_name">Last Name</string>>
+    <string name="edit_screen_email">Email</string>>
+
 
 </resources>
 

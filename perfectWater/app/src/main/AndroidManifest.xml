@@ -26,6 +26,10 @@
             android:name=".Controller.HomeScreen"
             android:label="@string/title_activity_home_screen"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Controller.EditProfile"
+            android:label="EditProfile"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
