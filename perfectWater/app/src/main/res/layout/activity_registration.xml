@@ -98,12 +98,12 @@
 
 
             <Button
-                android:id="@+id/register_button"
+                android:id="@+id/registration_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/register_button"
+                android:text="@string/registration_button"
                 android:textStyle="bold" />
 
         </LinearLayout>

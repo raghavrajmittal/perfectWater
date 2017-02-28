@@ -21,7 +21,7 @@
     <string name="title_activity_registration">Registration</string>
 
     <!-- Strings on registration screen -->
-    <string name="register_button">Register!</string>
+    <string name="registration_button">Register!</string>
     <string name="prompt_name">Your Name</string>
     <string name="action_name_short">Name</string>
     <string name="select_user_type">Select User Type</string>
