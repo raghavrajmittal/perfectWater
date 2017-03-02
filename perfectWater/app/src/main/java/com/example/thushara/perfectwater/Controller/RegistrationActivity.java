@@ -22,8 +22,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private TextView name ;
     private TextView username;
     private TextView password;
-    private ArrayList records;
-    private String[] info = {name.toString(), username.toString(), password.toString(), records.toString()};
+    private ArrayList<ArrayList<String>> records = new ArrayList<ArrayList<String>>();
+    private ArrayList<String> info = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +35,6 @@ public class RegistrationActivity extends AppCompatActivity {
         /**
          * Grab the dialog widgets so we can get info for later
          */
-
-        name = (EditText) findViewById(R.id.register_name);
-        username = (EditText) findViewById(R.id.register_username);
-        password = (EditText) findViewById(R.id.register_password);
-        userType = (Spinner) findViewById(R.id.usertypeSpinner);
-        records.add(info);
-
 
         //loads the spinners and sets the values in it
         userType = (Spinner) findViewById(R.id.usertypeSpinner);
@@ -72,6 +65,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
     // functionality when the "register" button is clicked
     private boolean register_new_user(){
+        name = (EditText) findViewById(R.id.register_name);
+        username = (EditText) findViewById(R.id.register_username);
+        password = (EditText) findViewById(R.id.register_password);
+        userType = (Spinner) findViewById(R.id.usertypeSpinner);
+        info.add(name.getText().toString());
+        info.add(username.getText().toString());
+        info.add(password.getText().toString());
+        records.add(info);
         return true;
     }
 
