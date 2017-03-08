@@ -19,9 +19,9 @@ import model.UserType;
 public class RegistrationActivity extends AppCompatActivity {
 
     private Spinner userType;
-    private TextView name ;
-    private TextView username;
-    private TextView password;
+    private EditText name ;
+    private EditText username;
+    private EditText password;
     private ArrayList records;
     private String[] info = {name.toString(), username.toString(), password.toString(), records.toString()};
 

@@ -11,12 +11,12 @@ import android.widget.Button;
 
 import com.example.thushara.perfectwater.R;
 
-public class HomeScreen extends AppCompatActivity {
+public class ReportsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_screen);
+        setContentView(R.layout.activity_reports);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -28,30 +28,22 @@ public class HomeScreen extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        //logout button functionality
-        Button logout_button = (Button) findViewById(R.id.home_screen_logout_button);
-        logout_button.setOnClickListener(new View.OnClickListener() {
+
+        //Report button functionality
+        Button viewReports_button = (Button) findViewById(R.id.viewReports_button);
+        viewReports_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
-                startActivity(new Intent(HomeScreen.this, LoginActivity.class));
-            }
-        });
-        //Edit Profile button functionality
-        Button edit_profile_button = (Button) findViewById(R.id.home_screen_edit_profile_button);
-        edit_profile_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(HomeScreen.this, EditProfile.class));
+                startActivity(new Intent(ReportsActivity.this, ReportsListActivity.class));
             }
         });
 
-        //Report button functionality
-        Button reports_button = (Button) findViewById(R.id.reports_button);
-        reports_button.setOnClickListener(new View.OnClickListener() {
+        //Add Report Button functionality
+        Button addReports_button = (Button) findViewById(R.id.addReports_button);
+        addReports_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeScreen.this, ReportsActivity.class));
+                startActivity(new Intent(ReportsActivity.this, WaterSourceReportActivity.class));
             }
         });
 
