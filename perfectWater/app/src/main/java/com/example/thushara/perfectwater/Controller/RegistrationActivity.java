@@ -2,11 +2,16 @@ package com.example.thushara.perfectwater.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.EditText;
@@ -17,6 +22,9 @@ import java.util.ArrayList;
 import model.UserType;
 
 public class RegistrationActivity extends AppCompatActivity {
+
+    private Spinner userTypeSpinner;
+    private ArrayList<String> registered_Users;
 
     private Spinner userType;
     private TextView name ;
@@ -37,10 +45,10 @@ public class RegistrationActivity extends AppCompatActivity {
          */
 
         //loads the spinners and sets the values in it
-        userType = (Spinner) findViewById(R.id.usertypeSpinner);
+        userTypeSpinner = (Spinner) findViewById(R.id.usertypeSpinner);
         ArrayAdapter<UserType> userTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserType.values());
         userTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        userType.setAdapter(userTypeAdapter);
+        userTypeSpinner.setAdapter(userTypeAdapter);
 
         Button registrationButton = (Button) findViewById(R.id.registration_button);
         registrationButton.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +81,7 @@ public class RegistrationActivity extends AppCompatActivity {
         info.add(username.getText().toString());
         info.add(password.getText().toString());
         records.add(info);
+
         return true;
     }
 
