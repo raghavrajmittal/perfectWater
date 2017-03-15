@@ -43,4 +43,16 @@
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/home_screen_edit_profile_button"
         android:layout_alignEnd="@+id/home_screen_edit_profile_button" />
+
+    <Button
+        android:text="Reports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/report_button"
+        android:layout_above="@+id/home_screen_view_water_availability_map_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/home_screen_view_water_availability_map_button"
+        android:layout_alignEnd="@+id/home_screen_view_water_availability_map_button" />
+
 </RelativeLayout>
