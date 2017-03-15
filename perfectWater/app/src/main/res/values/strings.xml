@@ -18,7 +18,9 @@ tr    </string>
     <!-- Strings on home screen -->
     <string name="title_activity_home_screen">HomeScreen</string>
     <string name="home_screen_logout_button">Log Out</string>
-    <string name="home_screen_edit_profile_button">Edit Profile</string>>
+    <string name="home_screen_edit_profile_button">Edit Profile</string>
+    <string name="home_screen_view_water_availability_map_button">View Map</string>>
+
 
     <!-- Strings on edit profile screen -->
     <string name="edit_screen_user_profile">User Profile</string>>
@@ -34,11 +36,10 @@ tr    </string>
     <string name="select_user_type">Select User Type</string>
     <string name="cancel_registration">Cancel</string>
     <string name="title_activity_registration">Registration</string>
+    <string name="title_activity_google_maps">Map</string>
 
 
     <!-- Strings on edit profile screen -->
-
-
 
 
 </resources>
