@@ -46,7 +46,14 @@ public class HomeScreen extends AppCompatActivity {
             }
         }
         );
-
+        Button water_avail_map = (Button) findViewById(R.id.home_screen_view_water_availability_map_button);
+        water_avail_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                startActivity(new Intent(HomeScreen.this, GoogleMapsActivity.class));
+            }
+        });
 
     }
 
