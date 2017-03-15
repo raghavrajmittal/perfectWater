@@ -11,6 +11,14 @@ import android.widget.Button;
 
 import com.example.thushara.perfectwater.R;
 
+
+/**
+ * describe method
+ * @param
+ * @return
+ * @throws
+ */
+
 public class HomeScreen extends AppCompatActivity {
 
     @Override
