@@ -75,7 +75,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                 startActivity(new Intent(WaterPurityReportActivity.this, HomeScreen.class));
             }
         });
-        //Submit Report Button
+        //Submit Report Button --> takes you to main screen with reports
         Button submit_button = (Button) findViewById(R.id.submit_button1);
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
