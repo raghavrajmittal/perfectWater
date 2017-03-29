@@ -47,6 +47,22 @@ public class ReportsActivity extends AppCompatActivity {
             }
         });
 
+        Button addPurityReport_button = (Button) findViewById(R.id.addPurityReport_button);
+        addPurityReport_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ReportsActivity.this, WaterPurityReportActivity.class));
+            }
+        });
+
+        Button viewPurityReport_button = (Button) findViewById(R.id.viewPurityReport_button);
+        viewPurityReport_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ReportsActivity.this, PurityListActivity.class));
+            }
+        });
+
     }
 
 }

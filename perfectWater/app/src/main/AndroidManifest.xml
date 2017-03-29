@@ -43,11 +43,19 @@
         <activity
             android:name=".Controller.ReportsListActivity"
             android:label="@string/title_activity_reports_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Controller.WaterSourceReportActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Controller.WaterSourceReportActivity"
             android:label="@string/title_activity_reports"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Controller.WaterPurityReportActivity"
+            android:label="@string/title_activity_water_purity_report"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Controller.PurityListActivity"
+            android:label="@string/title_activity_purity_list"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
     </application>
 
 </manifest>

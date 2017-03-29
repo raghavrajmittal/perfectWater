@@ -1,46 +1,47 @@
 package com.example.thushara.perfectwater.Controller;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 import com.example.thushara.perfectwater.R;
 
 import model.WaterCondition;
+import model.WaterPurityReport;
 import model.WaterSourceReport;
 import model.WaterType;
 
+public class WaterPurityReportActivity extends AppCompatActivity {
 
-public class WaterSourceReportActivity extends AppCompatActivity {
-    private Spinner watertype;
     private Spinner condition;
     private TextView nameo ;
     private TextView dateo;
     private TextView timeo;
     private TextView locationo;
+    private TextView virusppmo;
+    private TextView contppmo;
+
     private String waterCondition;
-    private String waterType;
     private String name ;
     private String date;
     private String time;
     private String location;
-    //private ArrayList info = new ArrayList(Arrays.asList(number, name.toString(), waterType.toString(),
-    //date.toString(), time.toString(), location.toString(), waterType.toString()));
+    private String virusppm;
+    private String contppm;
 
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_water_source_report);
+        setContentView(R.layout.activity_water_purity_report);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -48,20 +49,18 @@ public class WaterSourceReportActivity extends AppCompatActivity {
               * Grab the dialog widgets so we can get info for later
               */
 
-        nameo = (TextView) findViewById(R.id.name);
-        dateo = (TextView) findViewById(R.id.date);
-        timeo = (TextView) findViewById(R.id.time);
-        locationo = (TextView) findViewById(R.id.location);
+        nameo = (TextView) findViewById(R.id.name1);
+        dateo = (TextView) findViewById(R.id.date1);
+        timeo = (TextView) findViewById(R.id.time1);
+        locationo = (TextView) findViewById(R.id.location1);
+        virusppmo = (TextView) findViewById(R.id.virusppm);
+        contppmo = (TextView) findViewById(R.id.contaminantppm);
 
 
-        setContentView(R.layout.activity_water_source_report);
-        //loads the spinners and sets the values in it
-        watertype = (Spinner) findViewById(R.id.waterTypeSpinner);
-        ArrayAdapter<WaterType> waterTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterType.values());
-        waterTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        watertype.setAdapter(waterTypeAdapter);
+        setContentView(R.layout.activity_water_purity_report);
 
-        condition = (Spinner) findViewById(R.id.waterConditionSpinner);
+
+        condition = (Spinner) findViewById(R.id.waterConditionSpinner1);
         ArrayAdapter<WaterCondition> waterConditionAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterCondition.values());
         waterConditionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         condition.setAdapter(waterConditionAdapter);
@@ -69,15 +68,15 @@ public class WaterSourceReportActivity extends AppCompatActivity {
 
 
         //cancel profile button functionality
-        Button cancel_button = (Button) findViewById(R.id.cancel_source_report_button);
+        Button cancel_button = (Button) findViewById(R.id.cancel_purity_report_button);
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(WaterSourceReportActivity.this, HomeScreen.class));
+                startActivity(new Intent(WaterPurityReportActivity.this, HomeScreen.class));
             }
         });
         //Submit Report Button
-        Button submit_button = (Button) findViewById(R.id.submit_button);
+        Button submit_button = (Button) findViewById(R.id.submit_button1);
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,16 +84,13 @@ public class WaterSourceReportActivity extends AppCompatActivity {
                 date = dateo.getText().toString();
                 time = timeo.getText().toString();
                 location = locationo.getText().toString();
-                waterType = watertype.getSelectedItem().toString();
+                virusppm = virusppmo.getText().toString();
+                contppm = contppmo.getText().toString();
                 waterCondition = condition.getSelectedItem().toString();
-                WaterSourceReport report = new WaterSourceReport(name, date, time, location, waterType, waterCondition);
-                startActivity(new Intent(WaterSourceReportActivity.this, ReportsActivity.class));
+                WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virusppm, contppm);
+                startActivity(new Intent(WaterPurityReportActivity.this, ReportsActivity.class));
 
             }
         });
-
-
     }
-
-
 }

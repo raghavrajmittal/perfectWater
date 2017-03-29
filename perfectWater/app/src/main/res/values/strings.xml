@@ -37,6 +37,8 @@ tr    </string>
     <string name="title_activity_water_source_report">water source</string>
     <string name="title_activity_reports">ReportsActivity</string>
     <string name="title_activity_reports_list">ReportsList</string>
+    <string name="title_activity_water_purity_report">WaterPurityReportActivity</string>
+    <string name="title_activity_purity_list">PurityListActivity</string>
 
 </resources>
 
