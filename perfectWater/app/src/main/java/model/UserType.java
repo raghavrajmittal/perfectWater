@@ -17,7 +17,7 @@ public enum UserType implements Serializable{
         userType = ut;
     }
 
-    //toString Method
+    //toString Method for UserType Enum
     public String toString(){
         return userType;
     }
