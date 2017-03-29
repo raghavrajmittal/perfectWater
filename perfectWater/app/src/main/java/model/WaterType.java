@@ -16,6 +16,11 @@ public enum WaterType implements Serializable {
 
     private String waterType;
 
+    /**
+     * makes WaterType object
+     * @param wt String of watertype
+     */
+
     WaterType(String wt){
         waterType = wt;
     }

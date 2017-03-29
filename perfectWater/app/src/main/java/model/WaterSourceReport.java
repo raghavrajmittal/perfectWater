@@ -23,6 +23,16 @@ public class WaterSourceReport {
     private String location;
     private static int num;
 
+    /**
+     * creates WaterSourceReport object with name, date, time, location, watertype and watercondition
+     * @param name name of user
+     * @param date date report is being filed
+     * @param time time report is being filed
+     * @param location location report is indicating
+     * @param waterType what kind of water
+     * @param waterCondition condition of water
+     */
+
     public WaterSourceReport(String name, String date, String time, String location, String waterType, String waterCondition) {
         this.name = name;
         this.date = date;
@@ -37,6 +47,11 @@ public class WaterSourceReport {
         allReports.add(this);
         Log.d("name", name);
     }
+
+    /**
+     * gets all the water reports
+     * @return ArrayList of water source reports
+     */
 
     static public ArrayList<WaterSourceReport> getReports() {
         return allReports;

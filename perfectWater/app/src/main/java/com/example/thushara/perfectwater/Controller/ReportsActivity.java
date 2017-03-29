@@ -14,6 +14,7 @@ import com.example.thushara.perfectwater.R;
 public class ReportsActivity extends AppCompatActivity {
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reports);
@@ -42,6 +43,7 @@ public class ReportsActivity extends AppCompatActivity {
         Button addReports_button = (Button) findViewById(R.id.addReports_button);
         addReports_button.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
                 startActivity(new Intent(ReportsActivity.this, WaterSourceReportActivity.class));
             }

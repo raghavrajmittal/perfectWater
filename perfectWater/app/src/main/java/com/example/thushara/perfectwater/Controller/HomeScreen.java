@@ -11,6 +11,14 @@ import android.widget.Button;
 
 import com.example.thushara.perfectwater.R;
 
+
+/**
+ * describe method
+ * @param
+ * @return
+ * @throws
+ */
+
 public class HomeScreen extends AppCompatActivity {
 
     @Override
@@ -47,11 +55,20 @@ public class HomeScreen extends AppCompatActivity {
         });
 
         //Report button functionality
-        Button reports_button = (Button) findViewById(R.id.reports_button);
+        Button reports_button = (Button) findViewById(R.id.report_button);
         reports_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeScreen.this, ReportsActivity.class));
+            }
+        });
+
+        Button water_avail_map = (Button) findViewById(R.id.home_screen_view_water_availability_map_button);
+        water_avail_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                startActivity(new Intent(HomeScreen.this, GoogleMapsActivity.class));
             }
         });
 
