@@ -87,10 +87,16 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                 virusppm = virusppmo.getText().toString();
                 contppm = contppmo.getText().toString();
                 waterCondition = condition.getSelectedItem().toString();
-                WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virusppm, contppm);
+                WaterPurityReport report = createWaterPurityReport(name, date, time, location, waterCondition, virusppm, contppm);
+//                WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virusppm, contppm);
                 startActivity(new Intent(WaterPurityReportActivity.this, ReportsActivity.class));
 
             }
         });
+    }
+
+    private WaterPurityReport createWaterPurityReport(String name, String date, String time, String location, String waterCondition, String virusppm, String contppm){
+        WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virusppm, contppm);
+        return report;
     }
 }
