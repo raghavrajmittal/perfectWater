@@ -3,9 +3,8 @@ package model;
 import java.io.Serializable;
 
 /**
- * Created by deepapillalamarri on 3/7/17.
+ * Enum that represents the water condition
  */
-
 public enum WaterCondition implements Serializable {
     WASTE("Waste"),
     TREATABLECLEAR("Treatable-Clear"),
@@ -16,7 +15,7 @@ public enum WaterCondition implements Serializable {
 
     /**
      * constructor for WaterCondition, makes WaterCondition object enum
-     * @param wc String of watercondition
+     * @param wc String that represents water condition
      */
 
     WaterCondition(String wc){

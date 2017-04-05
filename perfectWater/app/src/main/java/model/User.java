@@ -1,15 +1,12 @@
 package model;
 
-import java.util.ArrayList;
-
 /**
  * A user object that contains all necessary information about the user
  */
 
 public class User {
 
-    private static ArrayList<WaterPurityReport> allUsers;
-    private String name;
+    private String Name;
     private String username;
     private String password;
     private UserType usertype;
