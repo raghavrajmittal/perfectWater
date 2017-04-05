@@ -68,7 +68,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
-                startActivity(new Intent(HomeScreen.this, GoogleMapsActivity.class));
+                startActivity(new Intent(HomeScreen.this, MapsActivity.class));
             }
         });
 

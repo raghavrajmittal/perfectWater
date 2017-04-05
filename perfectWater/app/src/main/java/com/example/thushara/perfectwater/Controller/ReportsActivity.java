@@ -14,7 +14,6 @@ import com.example.thushara.perfectwater.R;
 public class ReportsActivity extends AppCompatActivity {
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reports);
