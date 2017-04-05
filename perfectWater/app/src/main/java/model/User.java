@@ -14,5 +14,5 @@ public class User {
     private String homeAddress;
     private String emailAddress;
 
-    //make getters and setters for each, if somehow firebase doesn't work?
+    //make getters and setters for each, if somehow Fire_base doesn't work?
 }

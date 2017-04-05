@@ -43,7 +43,6 @@ public class RegistrationActivity extends AppCompatActivity {
         /**
          * Grab the dialog widgets so we can get info for later
          */
-
         //loads the spinners and sets the values in it
         userTypeSpinner = (Spinner) findViewById(R.id.usertypeSpinner);
         ArrayAdapter<UserType> userTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserType.values());
@@ -64,7 +63,7 @@ public class RegistrationActivity extends AppCompatActivity {
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //clearfields();
+                //clear_fields();
                 finish();
                 startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
             }
@@ -89,12 +88,12 @@ public class RegistrationActivity extends AppCompatActivity {
      *//**
      * Clears all the fields of the fields on the registration screen
      *//*
-    private void clearfields(){
+    private void clear_fields(){
         EditText nameView = (EditText) findViewById(R.id.register_name);
         AutoCompleteTextView usernameView = (AutoCompleteTextView) findViewById(R.id.register_username);
         EditText passwordView = (EditText) findViewById(R.id.register_password);
 
-        Spinner userTypeView = (Spinner) findViewById(R.id.usertypeSpinner);
+        Spinner userTypeView = (Spinner) findViewById(R.id.user_typeSpinner);
 
         nameView.setText("");
         usernameView.setText("");
