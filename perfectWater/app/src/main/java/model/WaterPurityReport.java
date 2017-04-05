@@ -5,7 +5,7 @@ import android.util.Log;
 import java.util.ArrayList;
 
 /**
- * Created by Thushara on 3/29/17.
+ * A water purity report class
  */
 
 public class WaterPurityReport {

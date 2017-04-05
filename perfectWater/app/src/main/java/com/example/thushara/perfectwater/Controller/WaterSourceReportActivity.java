@@ -22,12 +22,12 @@ import model.WaterType;
 
 
 public class WaterSourceReportActivity extends AppCompatActivity {
-    private Spinner watertype;
+    private Spinner water_type;
     private Spinner condition;
-    private TextView nameo ;
-    private TextView dateo;
-    private TextView timeo;
-    private TextView locationo;
+    private TextView name_tv ;
+    private TextView date_tv;
+    private TextView time_tv;
+    private TextView location_tv;
     private String waterCondition;
     private String waterType;
     private String name ;
@@ -48,18 +48,18 @@ public class WaterSourceReportActivity extends AppCompatActivity {
               * Grab the dialog widgets so we can get info for later
               */
 
-        nameo = (TextView) findViewById(R.id.name);
-        dateo = (TextView) findViewById(R.id.date);
-        timeo = (TextView) findViewById(R.id.time);
-        locationo = (TextView) findViewById(R.id.location);
+        name_tv = (TextView) findViewById(R.id.name);
+        date_tv = (TextView) findViewById(R.id.date);
+        time_tv = (TextView) findViewById(R.id.time);
+        location_tv = (TextView) findViewById(R.id.location);
 
 
         setContentView(R.layout.activity_water_source_report);
         //loads the spinners and sets the values in it
-        watertype = (Spinner) findViewById(R.id.waterTypeSpinner);
+        water_type = (Spinner) findViewById(R.id.waterTypeSpinner);
         ArrayAdapter<WaterType> waterTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterType.values());
         waterTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        watertype.setAdapter(waterTypeAdapter);
+        water_type.setAdapter(waterTypeAdapter);
 
         condition = (Spinner) findViewById(R.id.waterConditionSpinner);
         ArrayAdapter<WaterCondition> waterConditionAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterCondition.values());
@@ -81,14 +81,15 @@ public class WaterSourceReportActivity extends AppCompatActivity {
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                name = nameo.getText().toString();
-                date = dateo.getText().toString();
-                time = timeo.getText().toString();
-                location = locationo.getText().toString();
-                waterType = watertype.getSelectedItem().toString();
+                name = name_tv.getText().toString();
+                date = date_tv.getText().toString();
+                time = time_tv.getText().toString();
+                location = location_tv.getText().toString();
+                waterType = water_type.getSelectedItem().toString();
                 waterCondition = condition.getSelectedItem().toString();
                 WaterSourceReport report = new WaterSourceReport(name, date, time, location, waterType, waterCondition);
-                startActivity(new Intent(WaterSourceReportActivity.this, ReportsActivity.class));
+                finish();
+                startActivity(new Intent(WaterSourceReportActivity.this, ReportsListActivity.class));
 
             }
         });

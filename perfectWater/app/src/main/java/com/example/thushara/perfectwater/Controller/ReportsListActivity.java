@@ -29,10 +29,10 @@ public class ReportsListActivity extends AppCompatActivity {
         items = WaterSourceReport.getReports();
         //Bundle extras = getIntent().getExtras();
        // items = (ArrayList) extras.getSerializable("report list");
-        Log.d("reports", items.get(0).toString());
+        //Log.d("reports", items.get(0).toString());
         for (int i = 0; i < items.size(); i++) {
             details.add(items.get(i).toString());
-            Log.d("item", items.get(i).toString());
+            //Log.d("item", items.get(i).toString());
         }
 
         ListView listview = (ListView) findViewById(R.id.reports_list_view);

@@ -67,7 +67,6 @@ public class HomeScreen extends AppCompatActivity {
         water_avail_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
                 startActivity(new Intent(HomeScreen.this, MapsActivity.class));
             }
         });

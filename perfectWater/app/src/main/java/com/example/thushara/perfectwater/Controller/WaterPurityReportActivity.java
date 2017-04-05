@@ -22,20 +22,20 @@ import model.WaterType;
 public class WaterPurityReportActivity extends AppCompatActivity {
 
     private Spinner condition;
-    private TextView nameo ;
-    private TextView dateo;
-    private TextView timeo;
-    private TextView locationo;
-    private TextView virusppmo;
-    private TextView contppmo;
+    private TextView name_tv ;
+    private TextView date_tv;
+    private TextView time_tv;
+    private TextView location_tv;
+    private TextView virus_ppm_tv;
+    private TextView cont_ppm_tv;
 
     private String waterCondition;
     private String name ;
     private String date;
     private String time;
     private String location;
-    private String virusppm;
-    private String contppm;
+    private String virus_ppm;
+    private String cont_ppm;
 
 
     @Override
@@ -49,12 +49,12 @@ public class WaterPurityReportActivity extends AppCompatActivity {
               * Grab the dialog widgets so we can get info for later
               */
 
-        nameo = (TextView) findViewById(R.id.name1);
-        dateo = (TextView) findViewById(R.id.date1);
-        timeo = (TextView) findViewById(R.id.time1);
-        locationo = (TextView) findViewById(R.id.location1);
-        virusppmo = (TextView) findViewById(R.id.virusppm);
-        contppmo = (TextView) findViewById(R.id.contaminantppm);
+        name_tv = (TextView) findViewById(R.id.name1);
+        date_tv = (TextView) findViewById(R.id.date1);
+        time_tv = (TextView) findViewById(R.id.time1);
+        location_tv = (TextView) findViewById(R.id.location1);
+        virus_ppm_tv = (TextView) findViewById(R.id.virusppm);
+        cont_ppm_tv = (TextView) findViewById(R.id.contaminantppm);
 
 
         setContentView(R.layout.activity_water_purity_report);
@@ -80,23 +80,24 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                name = nameo.getText().toString();
-                date = dateo.getText().toString();
-                time = timeo.getText().toString();
-                location = locationo.getText().toString();
-                virusppm = virusppmo.getText().toString();
-                contppm = contppmo.getText().toString();
+                name = name_tv.getText().toString();
+                date = date_tv.getText().toString();
+                time = time_tv.getText().toString();
+                location = location_tv.getText().toString();
+                virus_ppm = virus_ppm_tv.getText().toString();
+                cont_ppm = cont_ppm_tv.getText().toString();
                 waterCondition = condition.getSelectedItem().toString();
-                WaterPurityReport report = createWaterPurityReport(name, date, time, location, waterCondition, virusppm, contppm);
-//                WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virusppm, contppm);
-                startActivity(new Intent(WaterPurityReportActivity.this, ReportsActivity.class));
+                WaterPurityReport report = createWaterPurityReport(name, date, time, location, waterCondition, virus_ppm, cont_ppm);
+//                WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virus_ppm, cont_ppm);
+                finish();
+                startActivity(new Intent(WaterPurityReportActivity.this, PurityListActivity.class));
 
             }
         });
     }
 
-    private WaterPurityReport createWaterPurityReport(String name, String date, String time, String location, String waterCondition, String virusppm, String contppm){
-        WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virusppm, contppm);
+    private WaterPurityReport createWaterPurityReport(String name, String date, String time, String location, String waterCondition, String virus_ppm, String cont_ppm){
+        WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virus_ppm, cont_ppm);
         return report;
     }
 }

@@ -3,9 +3,8 @@ package model;
 import java.io.Serializable;
 
 /**
- * Created by deepapillalamarri on 3/7/17.
+ * Enum that represents the type of water
  */
-
 public enum WaterType implements Serializable {
     BOTTLED("Bottled"),
     WELL("Well"),
@@ -18,7 +17,7 @@ public enum WaterType implements Serializable {
 
     /**
      * makes WaterType object
-     * @param wt String of watertype
+     * @param wt String of water type
      */
 
     WaterType(String wt){

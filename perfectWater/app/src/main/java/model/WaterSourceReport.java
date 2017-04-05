@@ -9,7 +9,7 @@ import com.example.thushara.perfectwater.Controller.WaterSourceReportActivity;
 import java.util.ArrayList;
 
 /**
- * Created by deepapillalamarri on 3/8/17.
+ * A water source report class
  */
 
 public class WaterSourceReport {
@@ -24,7 +24,7 @@ public class WaterSourceReport {
     private static int num;
 
     /**
-     * creates WaterSourceReport object with name, date, time, location, watertype and watercondition
+     * creates WaterSourceReport object with name, date, time, location, water type and water condition
      * @param name name of user
      * @param date date report is being filed
      * @param time time report is being filed
