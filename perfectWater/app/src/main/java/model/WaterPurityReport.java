@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class WaterPurityReport {
 
-    private static ArrayList<WaterPurityReport> allReports;
+    private static ArrayList<WaterPurityReport> purity_reports;
     private static ArrayList<String> report;
     private String waterCondition;
     private String virusppm;
@@ -30,15 +30,22 @@ public class WaterPurityReport {
         this.location = location;
         this.waterCondition = waterCondition.toString();
         this.num = num++;
-        if (allReports == null) {
-            allReports = new ArrayList<>();
+        if (purity_reports == null) {
+            purity_reports = new ArrayList<>();
         }
-        allReports.add(this);
+        purity_reports.add(this);
         Log.d("name", name);
     }
 
     static public ArrayList<WaterPurityReport> getReports() {
-        return allReports;
+        return purity_reports;
+    }
+
+    public String getVirusppm() {
+        return virusppm;
+    }
+    public String getDate() {
+        return date;
     }
 
 

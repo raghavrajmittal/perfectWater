@@ -64,6 +64,15 @@ public class ReportsActivity extends AppCompatActivity {
             }
         });
 
+        Button graph_button = (Button) findViewById(R.id.graph_button);
+        graph_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ReportsActivity.this, HistoricalGraphActivity.class));
+            }
+        });
+
+
     }
 
 }
