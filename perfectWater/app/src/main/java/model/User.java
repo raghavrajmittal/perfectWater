@@ -6,7 +6,7 @@ package model;
 
 public class User {
 
-    private String Name;
+    private String name;
     private String username;
     private String password;
     private UserType usertype;
