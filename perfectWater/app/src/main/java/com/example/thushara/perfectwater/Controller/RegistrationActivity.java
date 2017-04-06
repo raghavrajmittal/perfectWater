@@ -40,9 +40,6 @@ public class RegistrationActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /**
-         * Grab the dialog widgets so we can get info for later
-         */
         //loads the spinners and sets the values in it
         userTypeSpinner = (Spinner) findViewById(R.id.usertypeSpinner);
         ArrayAdapter<UserType> userTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserType.values());
@@ -84,21 +81,21 @@ public class RegistrationActivity extends AppCompatActivity {
         return true;
     }
 
-/*
-     *//**
-     * Clears all the fields of the fields on the registration screen
-     *//*
-    private void clear_fields(){
-        EditText nameView = (EditText) findViewById(R.id.register_name);
-        AutoCompleteTextView usernameView = (AutoCompleteTextView) findViewById(R.id.register_username);
-        EditText passwordView = (EditText) findViewById(R.id.register_password);
 
-        Spinner userTypeView = (Spinner) findViewById(R.id.user_typeSpinner);
-
-        nameView.setText("");
-        usernameView.setText("");
-        passwordView.setText("");
-
-    }*/
+//    /**
+//     * Clears all the fields of the registration activity
+//     */
+//    private void clear_fields(){
+//        EditText nameView = (EditText) findViewById(R.id.register_name);
+//        AutoCompleteTextView usernameView = (AutoCompleteTextView) findViewById(R.id.register_username);
+//        EditText passwordView = (EditText) findViewById(R.id.register_password);
+//
+//        Spinner userTypeView = (Spinner) findViewById(R.id.user_typeSpinner);
+//
+//        nameView.setText("");
+//        usernameView.setText("");
+//        passwordView.setText("");
+//
+//    }
 
 }

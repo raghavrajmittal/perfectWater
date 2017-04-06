@@ -45,10 +45,6 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /**
-              * Grab the dialog widgets so we can get info for later
-              */
-
         name_tv = (TextView) findViewById(R.id.name1);
         date_tv = (TextView) findViewById(R.id.date1);
         time_tv = (TextView) findViewById(R.id.time1);

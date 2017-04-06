@@ -44,10 +44,6 @@ public class WaterSourceReportActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /**
-              * Grab the dialog widgets so we can get info for later
-              */
-
         name_tv = (TextView) findViewById(R.id.name);
         date_tv = (TextView) findViewById(R.id.date);
         time_tv = (TextView) findViewById(R.id.time);
