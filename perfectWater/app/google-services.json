@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "150493525484",
+    "firebase_url": "https://perfectwater75-cc70a.firebaseio.com",
+    "project_id": "perfectwater75-cc70a",
+    "storage_bucket": "perfectwater75-cc70a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150493525484:android:290167c35b092010",
+        "android_client_info": {
+          "package_name": "com.example.thushara.perfectwater"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150493525484-f43vfknn10tj835csku13lmjv8mg88l4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzLi1Wzf0F_E_b7U_LkyVsC_oVNMZhgt0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
