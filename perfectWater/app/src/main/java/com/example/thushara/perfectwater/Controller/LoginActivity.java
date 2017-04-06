@@ -330,13 +330,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 if (pieces[0].equals(mEmail)) {
                     // Account exists, return true if the password matches.
                     return pieces[1].equals(mPassword);
-                } else {
-                    return pieces[0].equals(mEmail);
                 }
             }
-
-            // TODO: register the new account here.
-            return true;
+            return false;
         }
 
         @Override

@@ -28,6 +28,9 @@ import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +44,11 @@ import model.LoginSQL;
 public class HomeScreen extends AppCompatActivity {
     private static final int RC_SIGN_IN = 0;
     private FirebaseAuth auth;
+    private static DatabaseReference userDB;
+    private static DatabaseReference waterPurityReportDB;
+    private static DatabaseReference waterSourceReportDB;
+
+    private static String usertype;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,9 +70,15 @@ public class HomeScreen extends AppCompatActivity {
 
         System.out.println("HOMESCREEN");
         auth = FirebaseAuth.getInstance();
+
+        userDB = FirebaseDatabase.getInstance().getReference("Users");
+        waterPurityReportDB = FirebaseDatabase.getInstance().getReference("Water Purity Reports");
+        waterSourceReportDB = FirebaseDatabase.getInstance().getReference("Water Source Reports");
         if (auth.getCurrentUser() != null) {
             //user already signed in
             Log.d("AUTH", auth.getCurrentUser().getEmail());
+            String userid = auth.getCurrentUser().getUid();
+//            setVisibility(userDB.child(userid));
         } else {
             startActivityForResult(AuthUI.getInstance()
                     .createSignInIntentBuilder().setProviders(
@@ -84,6 +98,7 @@ public class HomeScreen extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
         //logout button functionality
         Button logout_button = (Button) findViewById(R.id.home_screen_logout_button);
         logout_button.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +114,7 @@ public class HomeScreen extends AppCompatActivity {
 //                startActivity(new Intent(HomeScreen.this, LoginActivity.class));
             }
         });
+
         //Edit Profile button functionality
         Button edit_profile_button = (Button) findViewById(R.id.home_screen_edit_profile_button);
         edit_profile_button.setOnClickListener(new View.OnClickListener() {
@@ -118,7 +134,6 @@ public class HomeScreen extends AppCompatActivity {
         });
 
         //Google Maps button functionality
-
         Button water_avail_map = (Button) findViewById(R.id.home_screen_view_water_availability_map_button);
         water_avail_map.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,5 +157,32 @@ public class HomeScreen extends AppCompatActivity {
             }
         }
     }
+
+    /*
+     * @return user child from Firebase
+     */
+    public static DatabaseReference getUserDatabase(){
+        return userDB;
+    }
+
+
+    public static DatabaseReference getWaterPurityReportDatabase(){
+        return waterPurityReportDB;
+    }
+
+
+    public static DatabaseReference getWaterSourceReportDatabase(){
+        return waterSourceReportDB;
+    }
+
+
+//    private void setVisibility (DatabaseReference dbReference){
+//        read(dbReference, new OnGetDataListener() {
+//            @Override
+//            public void onSuccess(DataSnapshot datasnap){
+//                usertype = datasnap.child("usertype").getValue(String.class);
+//            }
+//        })
+//    }
 
 }

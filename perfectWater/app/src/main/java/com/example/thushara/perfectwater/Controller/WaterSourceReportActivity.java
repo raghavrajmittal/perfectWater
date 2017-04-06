@@ -15,6 +15,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import com.example.thushara.perfectwater.R;
+import com.google.firebase.database.DatabaseReference;
 
 import model.WaterCondition;
 import model.WaterSourceReport;
@@ -36,7 +37,6 @@ public class WaterSourceReportActivity extends AppCompatActivity {
     private String location;
     //private ArrayList info = new ArrayList(Arrays.asList(number, name.toString(), waterType.toString(),
     //date.toString(), time.toString(), location.toString(), waterType.toString()));
-
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,8 +90,6 @@ public class WaterSourceReportActivity extends AppCompatActivity {
             }
         });
 
-
     }
-
 
 }
