@@ -32,6 +32,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.LoginSQL;
+
 
 /**
  * Home screen activity that contains firebase login and buttons for all the functionality
@@ -42,6 +44,13 @@ public class HomeScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
         List<AuthUI.IdpConfig> providers = new ArrayList<>();
@@ -49,6 +58,9 @@ public class HomeScreen extends AppCompatActivity {
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build());
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.FACEBOOK_PROVIDER).build());
 
+        LoginSQL loginSQL = new LoginSQL();
+
+        System.out.println("HOMESCREEN");
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) {
             //user already signed in
