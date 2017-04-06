@@ -26,6 +26,7 @@ tr    </string>
     <string name="edit_screen_first_name">First Name</string>>
     <string name="edit_screen_last_name">Last Name</string>>
     <string name="edit_screen_email">Email</string>>
+    <string name="edit_screen_address">Residential Address</string>
 
 
     <!-- Strings on registration screen -->

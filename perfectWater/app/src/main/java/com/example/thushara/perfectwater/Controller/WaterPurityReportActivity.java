@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.thushara.perfectwater.R;
+import com.google.firebase.database.DatabaseReference;
 
 import model.WaterCondition;
 import model.WaterPurityReport;
@@ -36,7 +37,6 @@ public class WaterPurityReportActivity extends AppCompatActivity {
     private String location;
     private String virus_ppm;
     private String cont_ppm;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,4 +96,5 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virus_ppm, cont_ppm);
         return report;
     }
+
 }
