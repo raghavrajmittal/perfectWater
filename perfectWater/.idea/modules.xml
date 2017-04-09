@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/perfectWater.iml" filepath="$PROJECT_DIR$/perfectWater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sqlite-jdbc-3.16.1/sqlite-jdbc-3.16.1.iml" filepath="$PROJECT_DIR$/sqlite-jdbc-3.16.1/sqlite-jdbc-3.16.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sqlite-jdbc-3.16.11/sqlite-jdbc-3.16.11.iml" filepath="$PROJECT_DIR$/sqlite-jdbc-3.16.11/sqlite-jdbc-3.16.11.iml" />
     </modules>
   </component>
 </project>
