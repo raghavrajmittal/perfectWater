@@ -2,6 +2,10 @@ package model;
 
 import android.util.Log;
 
+import com.example.thushara.perfectwater.Controller.HomeScreen;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+
 import java.util.ArrayList;
 
 /**
@@ -46,6 +50,17 @@ public class WaterPurityReport {
     }
     public String getDate() {
         return date;
+    }
+
+    public void writeToDatabase() {
+        DatabaseReference purityReportDB = HomeScreen.getWaterPurityReportDatabase();
+        purityReportDB.child(Integer.toString(num)).child("Name").setValue(name);
+        purityReportDB.child(Integer.toString(num)).child("Date").setValue(date);
+        purityReportDB.child(Integer.toString(num)).child("Water Condition").setValue(waterCondition);
+        purityReportDB.child(Integer.toString(num)).child("Zip code").setValue(location);
+        purityReportDB.child(Integer.toString(num)).child("Virus ppm").setValue(virusppm);
+        purityReportDB.child(Integer.toString(num)).child("Cont ppm").setValue(contppm);
+
     }
 
 

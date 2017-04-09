@@ -1,6 +1,7 @@
 package model;
 
 import com.example.thushara.perfectwater.Controller.HomeScreen;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
 /**
@@ -10,22 +11,20 @@ import com.google.firebase.database.DatabaseReference;
 public class User {
 
     private String name;
-    private String username;
-    private String password;
-    private UserType usertype;
+//    private String password;
+    private String usertype;
 
-    private String homeAddress;
+    private String zipcode;
     private String emailAddress;
 
 
-//    public User(String name, String username, String password, String homeAddress, String emailAddress) {
-//        this.name = name;
-//        this.username = username;
-//        this.emailAddress = emailAddress;
-//        this.homeAddress = homeAddress;
-//        this.emailAddress = emailAddress;
-//
-//    }
+    public User(String name, String zipcode, String userType) {
+        this.name = name;
+        //this.emailAddress = emailAddress;
+        this.zipcode = zipcode;
+        this.usertype = userType;
+
+    }
     //make getters and setters for each, if somehow firebase doesn't work?
 
     /*
@@ -33,11 +32,11 @@ public class User {
      */
 
     public void writeToDatabase(String userid) {
+        FirebaseAuth auth = HomeScreen.getAuth();
         DatabaseReference userDatabase = HomeScreen.getUserDatabase();
         userDatabase.child(userid).child("Name").setValue(name);
-        userDatabase.child(userid).child("Email").setValue(name);
-        userDatabase.child(userid).child("Address").setValue(homeAddress);
-        userDatabase.child(userid).child("Email").setValue(name);
+        userDatabase.child(userid).child("Email").setValue(auth.getCurrentUser().getEmail());
+        userDatabase.child(userid).child("Zipcode").setValue(zipcode);
         userDatabase.child(userid).child("User Type").setValue(usertype);
     }
 

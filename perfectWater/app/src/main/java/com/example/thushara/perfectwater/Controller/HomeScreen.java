@@ -41,7 +41,7 @@ import java.util.List;
  */
 public class HomeScreen extends AppCompatActivity {
     private static final int RC_SIGN_IN = 0;
-    private FirebaseAuth auth;
+    private static FirebaseAuth auth;
     private static DatabaseReference userDB;
     private static DatabaseReference waterPurityReportDB;
     private static DatabaseReference waterSourceReportDB;
@@ -103,12 +103,12 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
-        //Edit Profile button functionality
+        //Edit Profile button functionality (actually goes to registration activity)
         Button edit_profile_button = (Button) findViewById(R.id.home_screen_edit_profile_button);
         edit_profile_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeScreen.this, EditProfile.class));
+                startActivity(new Intent(HomeScreen.this, RegistrationActivity.class));
             }
         });
 
@@ -162,6 +162,11 @@ public class HomeScreen extends AppCompatActivity {
     public static DatabaseReference getWaterSourceReportDatabase(){
         return waterSourceReportDB;
     }
+
+    public static FirebaseAuth getAuth() {
+        return auth;
+    }
+
 
 
 //    private void setVisibility (DatabaseReference dbReference){

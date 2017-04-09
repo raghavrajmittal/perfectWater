@@ -6,9 +6,11 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -23,12 +25,12 @@ import model.WaterType;
 public class WaterPurityReportActivity extends AppCompatActivity {
 
     private Spinner condition;
-    private TextView name_tv ;
-    private TextView date_tv;
-    private TextView time_tv;
-    private TextView location_tv;
-    private TextView virus_ppm_tv;
-    private TextView cont_ppm_tv;
+    private EditText name_tv ;
+    private EditText date_tv;
+    private EditText time_tv;
+    private EditText location_tv;
+    private EditText virus_ppm_tv;
+    private EditText cont_ppm_tv;
 
     private String waterCondition;
     private String name ;
@@ -45,12 +47,12 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        name_tv = (TextView) findViewById(R.id.name1);
-        date_tv = (TextView) findViewById(R.id.date1);
-        time_tv = (TextView) findViewById(R.id.time1);
-        location_tv = (TextView) findViewById(R.id.location1);
-        virus_ppm_tv = (TextView) findViewById(R.id.virusppm);
-        cont_ppm_tv = (TextView) findViewById(R.id.contaminantppm);
+        name_tv = (EditText) findViewById(R.id.name1);
+        date_tv = (EditText) findViewById(R.id.date1);
+        time_tv = (EditText) findViewById(R.id.time1);
+        location_tv = (EditText) findViewById(R.id.location1);
+        virus_ppm_tv = (EditText) findViewById(R.id.virusppm);
+        cont_ppm_tv = (EditText) findViewById(R.id.contaminantppm);
 
 
         setContentView(R.layout.activity_water_purity_report);
@@ -82,9 +84,11 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                 location = location_tv.getText().toString();
                 virus_ppm = virus_ppm_tv.getText().toString();
                 cont_ppm = cont_ppm_tv.getText().toString();
+                Log.d("poop", name);
+                Log.d("pasa", "Look above this");
                 waterCondition = condition.getSelectedItem().toString();
                 WaterPurityReport report = createWaterPurityReport(name, date, time, location, waterCondition, virus_ppm, cont_ppm);
-//                WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virus_ppm, cont_ppm);
+                report.writeToDatabase();
                 finish();
                 startActivity(new Intent(WaterPurityReportActivity.this, PurityListActivity.class));
 

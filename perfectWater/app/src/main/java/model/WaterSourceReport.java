@@ -4,7 +4,10 @@ import android.util.Log;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.thushara.perfectwater.Controller.HomeScreen;
 import com.example.thushara.perfectwater.Controller.WaterSourceReportActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
 
@@ -62,6 +65,15 @@ public class WaterSourceReport {
     public String toString() {
         String details = "Report Date: " + date + "Report Name: " + name + "Report location: " + location;
         return details;
+    }
+
+    public void writeToDatabase() {
+        DatabaseReference sourceReportDB = HomeScreen.getWaterSourceReportDatabase();
+        sourceReportDB.child(Integer.toString(num)).child("Name").setValue(name);
+        sourceReportDB.child(Integer.toString(num)).child("Date").setValue(date);
+        sourceReportDB.child(Integer.toString(num)).child("Water Type").setValue(waterType);
+        sourceReportDB.child(Integer.toString(num)).child("Water Condition").setValue(waterCondition);
+        sourceReportDB.child(Integer.toString(num)).child("Zipcode").setValue(location);
     }
 
 

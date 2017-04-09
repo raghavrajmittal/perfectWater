@@ -25,10 +25,10 @@ import model.WaterType;
 public class WaterSourceReportActivity extends AppCompatActivity {
     private Spinner water_type;
     private Spinner condition;
-    private TextView name_tv ;
-    private TextView date_tv;
-    private TextView time_tv;
-    private TextView location_tv;
+    private EditText name_tv ;
+    private EditText date_tv;
+    private EditText time_tv;
+    private EditText location_tv;
     private String waterCondition;
     private String waterType;
     private String name ;
@@ -44,10 +44,10 @@ public class WaterSourceReportActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        name_tv = (TextView) findViewById(R.id.name);
-        date_tv = (TextView) findViewById(R.id.date);
-        time_tv = (TextView) findViewById(R.id.time);
-        location_tv = (TextView) findViewById(R.id.location);
+        name_tv = (EditText) findViewById(R.id.name);
+        date_tv = (EditText) findViewById(R.id.date);
+        time_tv = (EditText) findViewById(R.id.time);
+        location_tv = (EditText) findViewById(R.id.location);
 
 
         setContentView(R.layout.activity_water_source_report);
@@ -84,6 +84,7 @@ public class WaterSourceReportActivity extends AppCompatActivity {
                 waterType = water_type.getSelectedItem().toString();
                 waterCondition = condition.getSelectedItem().toString();
                 WaterSourceReport report = new WaterSourceReport(name, date, time, location, waterType, waterCondition);
+                report.writeToDatabase();
                 finish();
                 startActivity(new Intent(WaterSourceReportActivity.this, ReportsListActivity.class));
 

@@ -42,7 +42,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/location1"
-        android:hint="Location" />
+        android:hint="Zipcode" />
 
     <EditText
         android:layout_width="match_parent"

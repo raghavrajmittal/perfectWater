@@ -16,9 +16,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.EditText;
 import com.example.thushara.perfectwater.R;
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.vision.text.Text;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
+import model.User;
 import model.UserType;
 
 public class RegistrationActivity extends AppCompatActivity {
@@ -28,8 +32,9 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private Spinner userType;
     private TextView name ;
-    private TextView username;
+    private TextView zipcode;
     private TextView password;
+    private TextView emailAddress;
     private ArrayList<ArrayList<String>> records = new ArrayList<ArrayList<String>>();
     private ArrayList<String> info = new ArrayList<String>();
 
@@ -50,7 +55,7 @@ public class RegistrationActivity extends AppCompatActivity {
         registrationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                register_new_user();
+                register_user();
                 startActivity(new Intent(RegistrationActivity.this, HomeScreen.class));
                 finish();
             }
@@ -68,16 +73,13 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     // functionality when the "register" button is clicked
-    private boolean register_new_user(){
+    private boolean register_user(){
+        FirebaseAuth auth = HomeScreen.getAuth();
         name = (EditText) findViewById(R.id.register_name);
-        username = (EditText) findViewById(R.id.register_username);
-        password = (EditText) findViewById(R.id.register_password);
+        zipcode = (EditText) findViewById(R.id.register_zip);
         userType = (Spinner) findViewById(R.id.usertypeSpinner);
-        info.add(name.getText().toString());
-        info.add(username.getText().toString());
-        info.add(password.getText().toString());
-        records.add(info);
-
+        User someUser = new User(name.getText().toString(), zipcode.getText().toString(), userType.getSelectedItem().toString());
+        someUser.writeToDatabase(auth.getCurrentUser().getUid());
         return true;
     }
 
