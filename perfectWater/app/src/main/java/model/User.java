@@ -20,7 +20,6 @@ public class User {
 
     public User(String name, String zipcode, String userType) {
         this.name = name;
-        //this.emailAddress = emailAddress;
         this.zipcode = zipcode;
         this.usertype = userType;
 

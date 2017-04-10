@@ -18,15 +18,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/addReports_button"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/addPurityReport_button"
+        android:layout_alignStart="@+id/addPurityReport_button"
+        android:layout_marginTop="48dp" />
 
     <Button
         android:text="View Your Source Reports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/viewReports_button"
-        android:layout_marginTop="100dp"
-        android:layout_below="@+id/addReports_button"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/addPurityReport_button"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -34,15 +37,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id= "@+id/addPurityReport_button"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/addReports_button"
+        android:layout_alignRight="@+id/viewReports_button"
+        android:layout_alignEnd="@+id/viewReports_button" />
 
     <Button
         android:text="View Purity Reports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id= "@+id/viewPurityReport_button"
-        android:layout_marginTop="200dp"
+        android:layout_below="@+id/viewReports_button"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -50,8 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id= "@+id/graph_button"
-        android:layout_marginTop="250dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/viewPurityReport_button"
+        android:layout_alignLeft="@+id/addPurityReport_button"
+        android:layout_alignStart="@+id/addPurityReport_button" />
 
     <Button
         android:id="@+id/report_screen_home_screen_button"
@@ -61,5 +66,28 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:text="Home" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Add New Reports"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addPurityReport_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="View Your Reports"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
 </RelativeLayout>
