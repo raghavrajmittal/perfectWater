@@ -42,14 +42,14 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/location1"
-        android:hint="Zipcode" />
+        android:hint="@string/prompt_zip" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/virusppm"
+        android:id="@+id/virus"
         android:hint="Virus PPM" />
 
     <EditText
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/contaminantppm"
+        android:id="@+id/contaminant"
         android:hint="Contaminant PPM" />
 
     <TextView

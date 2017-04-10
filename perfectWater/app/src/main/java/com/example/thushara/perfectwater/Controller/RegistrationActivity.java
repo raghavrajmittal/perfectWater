@@ -46,7 +46,7 @@ public class RegistrationActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //loads the spinners and sets the values in it
-        userTypeSpinner = (Spinner) findViewById(R.id.usertypeSpinner);
+        userTypeSpinner = (Spinner) findViewById(R.id.userTypeSpinner);
         ArrayAdapter<UserType> userTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserType.values());
         userTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userTypeSpinner.setAdapter(userTypeAdapter);
@@ -77,7 +77,7 @@ public class RegistrationActivity extends AppCompatActivity {
         FirebaseAuth auth = HomeScreen.getAuth();
         name = (EditText) findViewById(R.id.register_name);
         zipcode = (EditText) findViewById(R.id.register_zip);
-        userType = (Spinner) findViewById(R.id.usertypeSpinner);
+        userType = (Spinner) findViewById(R.id.userTypeSpinner);
         User someUser = new User(name.getText().toString(), zipcode.getText().toString(), userType.getSelectedItem().toString());
         someUser.writeToDatabase(auth.getCurrentUser().getUid());
         return true;

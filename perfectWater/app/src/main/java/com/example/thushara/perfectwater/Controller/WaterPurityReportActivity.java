@@ -52,8 +52,8 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         date_tv = (EditText) findViewById(R.id.date1);
         time_tv = (EditText) findViewById(R.id.time1);
         location_tv = (EditText) findViewById(R.id.location1);
-        virus_ppm_tv = (EditText) findViewById(R.id.virusppm);
-        cont_ppm_tv = (EditText) findViewById(R.id.contaminantppm);
+        virus_ppm_tv = (EditText) findViewById(R.id.virus);
+        cont_ppm_tv = (EditText) findViewById(R.id.contaminant);
 
 
         //setContentView(R.layout.activity_water_purity_report);
