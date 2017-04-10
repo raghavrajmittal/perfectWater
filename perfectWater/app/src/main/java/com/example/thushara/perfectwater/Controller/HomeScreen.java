@@ -114,7 +114,7 @@ public class HomeScreen extends AppCompatActivity {
         edit_profile_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeScreen.this, RegistrationActivity.class));
+                startActivity(new Intent(HomeScreen.this, EditProfile.class));
             }
         });
 

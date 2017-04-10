@@ -72,6 +72,16 @@ public class ReportsActivity extends AppCompatActivity {
             }
         });
 
+        //home button functionality
+        Button home_screen = (Button) findViewById(R.id.report_screen_home_screen_button);
+        home_screen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ReportsActivity.this, HomeScreen.class));
+            }
+        });
+
+
 
     }
 
