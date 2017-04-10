@@ -60,7 +60,6 @@ public class WaterPurityReport {
         purityReportDB.child(Integer.toString(num)).child("Zip code").setValue(location);
         purityReportDB.child(Integer.toString(num)).child("Virus ppm").setValue(virusppm);
         purityReportDB.child(Integer.toString(num)).child("Cont ppm").setValue(contppm);
-
     }
 
 

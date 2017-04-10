@@ -26,7 +26,8 @@ public class EditProfile extends AppCompatActivity {
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+
+
                 startActivity(new Intent(EditProfile.this, HomeScreen.class));
             }
         });
@@ -40,6 +41,7 @@ public class EditProfile extends AppCompatActivity {
             }
         });
     }
+
 
 
 }

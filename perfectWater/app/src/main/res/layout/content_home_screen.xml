@@ -18,41 +18,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/home_screen_logout_button"
+        android:layout_marginBottom="56dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/home_screen_edit_profile_button"
-        android:layout_alignEnd="@+id/home_screen_edit_profile_button" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="@string/home_screen_edit_profile_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/home_screen_edit_profile_button"
+        android:layout_marginBottom="17dp"
         android:layout_above="@+id/home_screen_logout_button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/home_screen_edit_profile_button" />
+        android:layout_alignLeft="@+id/home_screen_logout_button"
+        android:background="@color/wallet_holo_blue_light"
+        android:layout_alignStart="@+id/home_screen_logout_button" />
 
     <Button
         android:text="Water Availablility Map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/home_screen_view_water_availability_map_button"
+        android:layout_marginBottom="17dp"
         android:layout_above="@+id/home_screen_edit_profile_button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/home_screen_edit_profile_button"
-        android:layout_alignEnd="@+id/home_screen_edit_profile_button" />
+        android:background="@color/wallet_holo_blue_light"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Reports"
+        android:id="@+id/report_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/report_button"
         android:layout_above="@+id/home_screen_view_water_availability_map_button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/home_screen_view_water_availability_map_button"
-        android:layout_alignEnd="@+id/home_screen_view_water_availability_map_button" />
+        android:layout_alignLeft="@+id/home_screen_edit_profile_button"
+        android:layout_alignStart="@+id/home_screen_edit_profile_button"
+        android:layout_marginBottom="15dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:elevation="10dp"
+        android:text="Reports" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Welcome \n to \n Perfect Water!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="30sp" />
 
 </RelativeLayout>
