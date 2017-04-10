@@ -25,10 +25,10 @@ import model.WaterType;
 public class WaterSourceReportActivity extends AppCompatActivity {
     private Spinner water_type;
     private Spinner condition;
-    private EditText name_tv ;
-    private EditText date_tv;
-    private EditText time_tv;
-    private EditText location_tv;
+    private TextView name_tv ;
+    private TextView date_tv;
+    private TextView time_tv;
+    private TextView location_tv;
     private String waterCondition;
     private String waterType;
     private String name ;
@@ -48,9 +48,6 @@ public class WaterSourceReportActivity extends AppCompatActivity {
         date_tv = (EditText) findViewById(R.id.date);
         time_tv = (EditText) findViewById(R.id.time);
         location_tv = (EditText) findViewById(R.id.location);
-
-
-        setContentView(R.layout.activity_water_source_report);
         //loads the spinners and sets the values in it
         water_type = (Spinner) findViewById(R.id.waterTypeSpinner);
         ArrayAdapter<WaterType> waterTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterType.values());
@@ -69,7 +66,7 @@ public class WaterSourceReportActivity extends AppCompatActivity {
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(WaterSourceReportActivity.this, HomeScreen.class));
+                startActivity(new Intent(WaterSourceReportActivity.this, ReportsActivity.class));
             }
         });
         //Submit Report Button

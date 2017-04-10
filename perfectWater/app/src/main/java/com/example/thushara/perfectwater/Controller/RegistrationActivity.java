@@ -67,7 +67,7 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //clear_fields();
                 finish();
-                startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
+                startActivity(new Intent(RegistrationActivity.this, HomeScreen.class));
             }
         });
     }

@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.thushara.perfectwater.R;
+import com.google.android.gms.vision.text.Text;
 import com.google.firebase.database.DatabaseReference;
 
 import model.WaterCondition;
@@ -25,12 +26,12 @@ import model.WaterType;
 public class WaterPurityReportActivity extends AppCompatActivity {
 
     private Spinner condition;
-    private EditText name_tv ;
-    private EditText date_tv;
-    private EditText time_tv;
-    private EditText location_tv;
-    private EditText virus_ppm_tv;
-    private EditText cont_ppm_tv;
+    private TextView name_tv ;
+    private TextView date_tv;
+    private TextView time_tv;
+    private TextView location_tv;
+    private TextView virus_ppm_tv;
+    private TextView cont_ppm_tv;
 
     private String waterCondition;
     private String name ;
@@ -55,7 +56,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         cont_ppm_tv = (EditText) findViewById(R.id.contaminantppm);
 
 
-        setContentView(R.layout.activity_water_purity_report);
+        //setContentView(R.layout.activity_water_purity_report);
 
 
         condition = (Spinner) findViewById(R.id.waterConditionSpinner1);
@@ -70,7 +71,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(WaterPurityReportActivity.this, HomeScreen.class));
+                startActivity(new Intent(WaterPurityReportActivity.this, ReportsActivity.class));
             }
         });
         //Submit Report Button --> takes you to main screen with reports
