@@ -12,30 +12,17 @@ import android.widget.Button;
 
 import com.example.thushara.perfectwater.R;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
-import com.firebase.ui.*;
 
-import com.example.thushara.perfectwater.R;
 import com.firebase.ui.auth.AuthUI;
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import model.LoginSQL;
 
 
 /**
@@ -60,7 +47,6 @@ public class HomeScreen extends AppCompatActivity {
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build());
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.FACEBOOK_PROVIDER).build());
 
-        LoginSQL loginSQL = new LoginSQL();
 
         System.out.println("HOMESCREEN");
         auth = FirebaseAuth.getInstance();
