@@ -36,7 +36,7 @@ public class WaterSourceReport {
      * @param waterCondition condition of water
      */
 
-    public WaterSourceReport(String name, String date, String time, String location, String waterType, String waterCondition) {
+    public WaterSourceReport(String name, String date, String time, String location, String waterType, String waterCondition) throws Exception{
         this.name = name;
         this.date = date;
         this.time = time;
@@ -44,6 +44,10 @@ public class WaterSourceReport {
         this.waterType = waterType.toString();
         this.waterCondition = waterCondition.toString();
         this.num = num++;
+        if (name.equals("") | date.equals("") | time.equals("") | location.equals("") |
+                waterType.equals("") | waterCondition.equals("")) {
+            throw new Exception("all fields need to be filled to submit a report.");
+        }
         if (allReports == null) {
             allReports = new ArrayList<>();
         }

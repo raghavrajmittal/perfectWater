@@ -1,4 +1,5 @@
 package model;
+import java.lang.Exception;
 
 import com.example.thushara.perfectwater.Controller.HomeScreen;
 import com.google.firebase.auth.FirebaseAuth;
@@ -11,20 +12,19 @@ import com.google.firebase.database.DatabaseReference;
 public class User {
 
     private String name;
-//    private String password;
     private String usertype;
-
     private String zipcode;
-    private String emailAddress;
 
 
-    public User(String name, String zipcode, String userType) {
+    public User(String name, String zipcode, String userType) throws Exception{
+        //check for empty strings
+        if (name.equals("") | zipcode.equals("") | userType.equals("")) {
+            throw new Exception("Name, Zipcode, and User Type are required elements.");
+        }
         this.name = name;
         this.zipcode = zipcode;
         this.usertype = userType;
-
     }
-    //make getters and setters for each, if somehow firebase doesn't work?
 
     /*
     writes a user to database
