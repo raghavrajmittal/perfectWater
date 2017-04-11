@@ -44,8 +44,8 @@ public class WaterSourceReport {
         this.waterType = waterType.toString();
         this.waterCondition = waterCondition.toString();
         this.num = num++;
-        if (name.equals("") | date.equals("") | time.equals("") | location.equals("") |
-                waterType.equals("") | waterCondition.equals("")) {
+        if (name.equals("") || date.equals("") || time.equals("") || location.equals("") ||
+                waterType.equals("") || waterCondition.equals("")) {
             throw new Exception("all fields need to be filled to submit a report.");
         }
         if (allReports == null) {

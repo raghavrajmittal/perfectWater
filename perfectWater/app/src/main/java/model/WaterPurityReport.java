@@ -25,7 +25,8 @@ public class WaterPurityReport {
     private String location;
     private static int num;
 
-    public WaterPurityReport(String name, String date, String time, String location, String waterCondition, String virusppm, String contppm) {
+    public WaterPurityReport(String name, String date, String time, String location,
+                             String waterCondition, String virusppm, String contppm) throws Exception{
         this.name = name;
         this.date = date;
         this.time = time;
@@ -34,6 +35,10 @@ public class WaterPurityReport {
         this.location = location;
         this.waterCondition = waterCondition.toString();
         this.num = num++;
+        if (name.equals("") || date.equals("") || time.equals("") || location.equals("") ||
+                virusppm.equals("") || waterCondition.equals("") || contppm.equals("")) {
+            throw new Exception("all fields need to be filled to submit a report.");
+        }
         if (purity_reports == null) {
             purity_reports = new ArrayList<>();
         }
