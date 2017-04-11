@@ -34,7 +34,7 @@
         android:layout_alignStart="@+id/home_screen_logout_button" />
 
     <Button
-        android:text="Water Availablility Map"
+        android:text="Water Availability Map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/home_screen_view_water_availability_map_button"

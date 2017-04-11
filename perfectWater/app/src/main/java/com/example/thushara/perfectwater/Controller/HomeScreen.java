@@ -35,7 +35,7 @@ public class HomeScreen extends AppCompatActivity {
     private static DatabaseReference waterPurityReportDB;
     private static DatabaseReference waterSourceReportDB;
 
-    private static String usertype;
+    private static String user_type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +57,8 @@ public class HomeScreen extends AppCompatActivity {
         if (auth.getCurrentUser() != null) {
             //user already signed in
             Log.d("AUTH", auth.getCurrentUser().getEmail());
-            String userid = auth.getCurrentUser().getUid();
-//            setVisibility(userDB.child(userid));
+            String user_id = auth.getCurrentUser().getUid();
+//            setVisibility(userDB.child(user_id));
         } else {
             startActivityForResult(AuthUI.getInstance()
                     .createSignInIntentBuilder().setProviders(
@@ -164,8 +164,8 @@ public class HomeScreen extends AppCompatActivity {
 //    private void setVisibility (DatabaseReference dbReference){
 //        read(dbReference, new OnGetDataListener() {
 //            @Override
-//            public void onSuccess(DataSnapshot datasnap){
-//                usertype = datasnap.child("usertype").getValue(String.class);
+//            public void onSuccess(DataSnapshot data_snap){
+//                user_type = data_snap.child("usertype").getValue(String.class);
 //            }
 //        })
 //    }

@@ -32,7 +32,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private Spinner userType;
     private TextView name ;
-    private TextView zipcode;
+    private TextView zip_code;
     private TextView password;
     private TextView emailAddress;
     private ArrayList<ArrayList<String>> records = new ArrayList<ArrayList<String>>();
@@ -76,9 +76,9 @@ public class RegistrationActivity extends AppCompatActivity {
     private boolean register_user(){
         FirebaseAuth auth = HomeScreen.getAuth();
         name = (EditText) findViewById(R.id.register_name);
-        zipcode = (EditText) findViewById(R.id.register_zip);
+        zip_code = (EditText) findViewById(R.id.register_zip);
         userType = (Spinner) findViewById(R.id.userTypeSpinner);
-        User someUser = new User(name.getText().toString(), zipcode.getText().toString(), userType.getSelectedItem().toString());
+        User someUser = new User(name.getText().toString(), zip_code.getText().toString(), userType.getSelectedItem().toString());
         someUser.writeToDatabase(auth.getCurrentUser().getUid());
         return true;
     }
