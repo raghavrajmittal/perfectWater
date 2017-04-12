@@ -55,9 +55,32 @@ public class User {
         return this.zipcode;
     }
 
-    //setters
-    public void setName(String name) {
+    //setter for name
+    /*
+    @param name String that has to be set as the user's name.
+    @returns boolean true if successfully change, false otherwise
+     */
+    public boolean setName(String name) {
+        //check if name is entered
+        if (name == "" || name == null) {
+            return false;
+        }
+
+        //check characters
+        for (int i = 0; i < name.length(); i++) {
+            char c = name.charAt(i);
+            //check if digit
+            if (Character.isDigit(c)){
+                return false;
+            }
+            //check for select few special characters
+            if (c == '$' || c == '#') {
+                return false;
+            }
+        }
+
         this.name = name;
+        return true;
     }
     public void setUsertype(String uType) {
         this.usertype = uType;
