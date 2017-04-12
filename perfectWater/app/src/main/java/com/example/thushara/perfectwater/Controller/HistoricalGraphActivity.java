@@ -36,12 +36,42 @@ public class HistoricalGraphActivity extends AppCompatActivity {
         });
 
         GraphView graph = (GraphView) findViewById(R.id.graph);
-        WaterPurityReport one = new WaterPurityReport("name", "01", "time", "location", "clean", "112", "113");
-        WaterPurityReport two = new WaterPurityReport("name", "02", "time", "location", "clean", "123", "113");
-        WaterPurityReport three = new WaterPurityReport("name", "03", "time", "location", "clean", "200", "113");
-        WaterPurityReport four = new WaterPurityReport("name", "04", "time", "location", "clean", "250", "113");
-        WaterPurityReport five = new WaterPurityReport("name", "05", "time", "location", "clean", "300", "113");
-        WaterPurityReport six = new WaterPurityReport("name", "06", "time", "location", "clean", "400", "113");
+        WaterPurityReport one = null;
+        try {
+            one = new WaterPurityReport("name", "01", "time", "location", "clean", "112", "113");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        WaterPurityReport two = null;
+        try {
+            two = new WaterPurityReport("name", "02", "time", "location", "clean", "123", "113");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        WaterPurityReport three = null;
+        try {
+            three = new WaterPurityReport("name", "03", "time", "location", "clean", "200", "113");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        WaterPurityReport four = null;
+        try {
+            four = new WaterPurityReport("name", "04", "time", "location", "clean", "250", "113");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        WaterPurityReport five = null;
+        try {
+            five = new WaterPurityReport("name", "05", "time", "location", "clean", "300", "113");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        WaterPurityReport six = null;
+        try {
+            six = new WaterPurityReport("name", "06", "time", "location", "clean", "400", "113");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
                 new DataPoint(parseInt(one.getDate()), parseInt(one.getVirusppm())),

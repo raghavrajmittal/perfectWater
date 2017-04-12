@@ -52,7 +52,7 @@ public class WaterSourceReport {
             allReports = new ArrayList<>();
         }
         allReports.add(this);
-        Log.d("name", name);
+        //Log.d("name", name);
     }
 
     /**
@@ -78,6 +78,25 @@ public class WaterSourceReport {
         sourceReportDB.child(Integer.toString(num)).child("Water Type").setValue(waterType);
         sourceReportDB.child(Integer.toString(num)).child("Water Condition").setValue(waterCondition);
         sourceReportDB.child(Integer.toString(num)).child("Zipcode").setValue(location);
+    }
+
+    public String getName() {
+        return name;
+    }
+    public String getTime() {
+        return time;
+    }
+    public String getDate() {
+        return date;
+    }
+    public String getLocation() {
+        return location;
+    }
+    public String getWaterCondition() {
+        return waterCondition;
+    }
+    public String getWaterType() {
+        return waterType;
     }
 
 

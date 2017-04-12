@@ -78,7 +78,12 @@ public class RegistrationActivity extends AppCompatActivity {
         name = (EditText) findViewById(R.id.register_name);
         zipcode = (EditText) findViewById(R.id.register_zip);
         userType = (Spinner) findViewById(R.id.userTypeSpinner);
-        User someUser = new User(name.getText().toString(), zipcode.getText().toString(), userType.getSelectedItem().toString());
+        User someUser = null;
+        try {
+            someUser = new User(name.getText().toString(), zipcode.getText().toString(), userType.getSelectedItem().toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         someUser.writeToDatabase(auth.getCurrentUser().getUid());
         return true;
     }

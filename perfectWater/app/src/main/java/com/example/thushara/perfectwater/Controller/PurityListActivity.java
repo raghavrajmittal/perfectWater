@@ -28,8 +28,8 @@ public class PurityListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_purity_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        WaterPurityReport one = new WaterPurityReport("diane", "1/2/3", "12:34", "ga", "safe", "112", "500");
-        WaterPurityReport two = new WaterPurityReport("deepa", "1/2/3", "12:34", "ga", "safe", "220", "400");
+        //WaterPurityReport one = new WaterPurityReport("diane", "1/2/3", "12:34", "ga", "safe", "112", "500");
+        //WaterPurityReport two = new WaterPurityReport("deepa", "1/2/3", "12:34", "ga", "safe", "220", "400");
         //items.add(one);
         //items.add(two);
         items = WaterPurityReport.getReports();

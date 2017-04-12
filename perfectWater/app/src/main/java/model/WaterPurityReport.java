@@ -43,19 +43,36 @@ public class WaterPurityReport {
             purity_reports = new ArrayList<>();
         }
         purity_reports.add(this);
-        Log.d("name", name);
+        //Log.d("name", name);
     }
 
     static public ArrayList<WaterPurityReport> getReports() {
         return purity_reports;
     }
 
-    public String getVirusppm() {
-        return virusppm;
+    public String getName() {
+        return name;
+    }
+    public String getTime() {
+        return time;
     }
     public String getDate() {
         return date;
     }
+    public String getLocation() {
+        return location;
+    }
+    public String getVirusppm() {
+        return virusppm;
+    }
+    public String getWaterCondition() {
+        return waterCondition;
+    }
+    public String getContppm() {
+        return contppm;
+    }
+
+
 
     public void writeToDatabase() {
         DatabaseReference purityReportDB = HomeScreen.getWaterPurityReportDatabase();

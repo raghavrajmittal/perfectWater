@@ -80,7 +80,12 @@ public class WaterSourceReportActivity extends AppCompatActivity {
                 location = location_tv.getText().toString();
                 waterType = water_type.getSelectedItem().toString();
                 waterCondition = condition.getSelectedItem().toString();
-                WaterSourceReport report = new WaterSourceReport(name, date, time, location, waterType, waterCondition);
+                WaterSourceReport report = null;
+                try {
+                    report = new WaterSourceReport(name, date, time, location, waterType, waterCondition);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 report.writeToDatabase();
                 finish();
                 startActivity(new Intent(WaterSourceReportActivity.this, ReportsListActivity.class));

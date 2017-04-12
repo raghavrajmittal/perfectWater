@@ -24,7 +24,11 @@ public class ReportsListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reports_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        WaterSourceReport one = new WaterSourceReport("diane", "1/2/3", "12:34", "ga", "spring", "waste");
+        try {
+            WaterSourceReport one = new WaterSourceReport("diane", "1/2/3", "12:34", "ga", "spring", "waste");
+        } catch (Exception e) {
+        }
+
       //  items.add(one);
         items = WaterSourceReport.getReports();
         //Bundle extras = getIntent().getExtras();

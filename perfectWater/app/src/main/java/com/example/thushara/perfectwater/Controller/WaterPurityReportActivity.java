@@ -98,7 +98,12 @@ public class WaterPurityReportActivity extends AppCompatActivity {
     }
 
     private WaterPurityReport createWaterPurityReport(String name, String date, String time, String location, String waterCondition, String virus_ppm, String cont_ppm){
-        WaterPurityReport report = new WaterPurityReport(name, date, time, location, waterCondition, virus_ppm, cont_ppm);
+        WaterPurityReport report = null;
+        try {
+            report = new WaterPurityReport(name, date, time, location, waterCondition, virus_ppm, cont_ppm);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return report;
     }
 
