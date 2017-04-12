@@ -29,7 +29,6 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private Spinner userTypeSpinner;
     private ArrayList<String> registered_Users;
-
     private Spinner userType;
     private TextView name ;
     private TextView zipcode;
