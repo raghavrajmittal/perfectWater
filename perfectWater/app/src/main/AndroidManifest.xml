@@ -39,13 +39,10 @@
         <activity
             android:name=".Controller.RegistrationActivity"
             android:label="@string/title_activity_registration"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" /><![CDATA[
         android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Controller.EditProfile"
-            android:label="EditProfile"
-            android:theme="@style/AppTheme.NoActionBar" />
         android:theme="@style/AppTheme.NoActionBar" />
+        ]]>
         <activity
             android:name=".Controller.ReportsActivity"
             android:label="@string/title_activity_reports"

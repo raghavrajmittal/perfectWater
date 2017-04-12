@@ -43,4 +43,26 @@ public class User {
         DatabaseReference userDatabase = HomeScreen.getUserDatabase();
         userDatabase.child(userid).removeValue();
     }
+
+    //getters
+    public String getName() {
+        return this.name;
+    }
+    public String getUsertype() {
+        return this.usertype;
+    }
+    public String getZipcode() {
+        return this.zipcode;
+    }
+
+    //setters
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setUsertype(String uType) {
+        this.usertype = uType;
+    }
+    public void setZipcode(String zip) {
+        this.zipcode = zip;
+    }
 }
