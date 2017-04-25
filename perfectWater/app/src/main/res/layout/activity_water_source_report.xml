@@ -13,42 +13,47 @@
     <!-- Login progress -->
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:id="@+id/name"
-        android:hint="Name" />
-
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="date"
         android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Name"
+        android:inputType="textPersonName" />
+
+    <EditText
         android:id="@+id/date"
-        android:hint="Date" />
-
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="time"
         android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Date"
+        android:inputType="date" />
+
+    <EditText
         android:id="@+id/time"
-        android:hint="Time" />
-
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Time"
+        android:inputType="time" />
+
+    <EditText
         android:id="@+id/location"
-        android:hint="Location" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Location"
+        android:inputType="textPersonName" />
 
     <TextView
-        android:text="Type of Water"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:fontFamily="sans-serif"
+        android:text="Type of Water"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textIsSelectable="false"
         android:textSize="20sp" />
@@ -59,10 +64,11 @@
         android:id="@+id/waterTypeSpinner" />
 
     <TextView
-        android:text="Condition of Water"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:fontFamily="sans-serif"
+        android:text="Condition of Water"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp" />
 
@@ -72,16 +78,20 @@
         android:id="@+id/waterConditionSpinner" />
 
     <Button
-        android:text="Cancel"
+        android:id="@+id/cancel_source_report_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cancel_source_report_button" />
+        android:background="@drawable/cast_mini_controller_gradient_light"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Cancel" />
 
     <Button
-        android:text="Submit Report"
+        android:id="@+id/submit_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/submit_button" />
+        android:background="@drawable/cast_mini_controller_gradient_light"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Submit Report" />
 
     <ProgressBar
         android:id="@+id/login_progress"

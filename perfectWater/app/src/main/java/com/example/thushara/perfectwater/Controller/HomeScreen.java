@@ -13,6 +13,7 @@ import android.widget.Button;
 import com.example.thushara.perfectwater.R;
 
 import android.util.Log;
+import android.widget.ImageButton;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -70,17 +71,9 @@ public class HomeScreen extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         //logout button functionality
-        Button logout_button = (Button) findViewById(R.id.home_screen_logout_button);
+        Button logout_button = (Button) findViewById(R.id.home_screen_log_out_button);
         logout_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,7 +89,7 @@ public class HomeScreen extends AppCompatActivity {
         });
 
         //Edit Profile button functionality (actually goes to registration activity)
-        Button edit_profile_button = (Button) findViewById(R.id.home_screen_edit_profile_button);
+        ImageButton edit_profile_button = (ImageButton) findViewById(R.id.home_screen_edit_profile_button);
         edit_profile_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,7 +98,7 @@ public class HomeScreen extends AppCompatActivity {
         });
 
         //Report button functionality
-        Button reports_button = (Button) findViewById(R.id.report_button);
+        ImageButton reports_button = (ImageButton) findViewById(R.id.home_screen_water_report_button);
         reports_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,7 +107,7 @@ public class HomeScreen extends AppCompatActivity {
         });
 
         //Google Maps button functionality
-        Button water_avail_map = (Button) findViewById(R.id.home_screen_view_water_availability_map_button);
+        ImageButton water_avail_map = (ImageButton) findViewById(R.id.home_screen_water_map_button);
         water_avail_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -13,81 +13,110 @@
     tools:context="com.example.thushara.perfectwater.Controller.ReportsActivity"
     tools:showIn="@layout/activity_reports">
 
-    <Button
-        android:text="Add Water Source Reports"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/addReports_button"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/addPurityReport_button"
-        android:layout_alignStart="@+id/addPurityReport_button"
-        android:layout_marginTop="48dp" />
-
-    <Button
-        android:text="View Your Source Reports"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/viewReports_button"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/addPurityReport_button"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Add Water Purity Report"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id= "@+id/addPurityReport_button"
-        android:layout_below="@+id/addReports_button"
-        android:layout_alignRight="@+id/viewReports_button"
-        android:layout_alignEnd="@+id/viewReports_button" />
-
-    <Button
-        android:text="View Purity Reports"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id= "@+id/viewPurityReport_button"
-        android:layout_below="@+id/viewReports_button"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Historical Reports Graph"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id= "@+id/graph_button"
-        android:layout_below="@+id/viewPurityReport_button"
-        android:layout_alignLeft="@+id/addPurityReport_button"
-        android:layout_alignStart="@+id/addPurityReport_button" />
-
-    <Button
-        android:id="@+id/report_screen_home_screen_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="Home" />
-
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/add_new_reports"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+
         android:layout_marginTop="12dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif"
         android:text="Add New Reports"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/add_new_reports"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/add_water_purity_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cast_mini_controller_gradient_light"
+            android:elevation="0dp"
+            android:lineSpacingExtra="18sp"
+            android:text="@string/add_water_purity_report" />
+
+        <Button
+            android:id="@+id/add_water_source_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cast_mini_controller_gradient_light"
+            android:text="@string/add_water_source_report" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view_reports"
+        android:layout_marginTop="13dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/view_purity_reports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cast_mini_controller_gradient_light"
+            android:lineSpacingExtra="18sp"
+            android:text="@string/view_water_purity_report" />
+
+        <Button
+            android:id="@+id/view_water_source_reports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cast_mini_controller_gradient_light"
+            android:lineSpacingExtra="18sp"
+            android:text="@string/view_water_source_report" />
+
+        <Button
+            android:id="@+id/historical_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cast_mini_controller_gradient_light"
+            android:text="@string/view_historical_report" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/report_screen_home_screen_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="?attr/homeAsUpIndicator" />
+
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/view_reports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif"
+        android:text="View Your Reports"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/addPurityReport_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="View Your Reports"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+        app:srcCompat="@drawable/pwlogosmall"
+        android:layout_alignTop="@+id/report_screen_home_screen_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

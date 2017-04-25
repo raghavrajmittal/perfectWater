@@ -46,5 +46,13 @@ tr    </string>
 
     <string name="facebook_application_id" translatable="false">708504369319588</string>
     <string name="title_activity_firebase_login">FirebaseLoginActivity</string>
+
+    <!-- Strings on report screen -->
+    <string name="add_water_source_report">Add_Water Source Report</string>
+    <string name="add_water_purity_report">Add Water Purity Report</string>
+    <string name="view_water_source_report">View Water Source Report</string>
+    <string name="view_water_purity_report">View Water Purity Report</string>
+    <string name="view_historical_report">View Historical Report</string>
+    <string name="home_button">Home</string>
 </resources>
 

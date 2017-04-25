@@ -17,20 +17,11 @@ public class ReportsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reports);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         //Report button functionality
-        Button viewReports_button = (Button) findViewById(R.id.viewReports_button);
+        Button viewReports_button = (Button) findViewById(R.id.view_water_source_reports);
         viewReports_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +30,7 @@ public class ReportsActivity extends AppCompatActivity {
         });
 
         //Add Report Button functionality
-        Button addReports_button = (Button) findViewById(R.id.addReports_button);
+        Button addReports_button = (Button) findViewById(R.id.add_water_source_report);
         addReports_button.setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -48,7 +39,7 @@ public class ReportsActivity extends AppCompatActivity {
             }
         });
 
-        Button addPurityReport_button = (Button) findViewById(R.id.addPurityReport_button);
+        Button addPurityReport_button = (Button) findViewById(R.id.add_water_purity_report);
         addPurityReport_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +47,7 @@ public class ReportsActivity extends AppCompatActivity {
             }
         });
 
-        Button viewPurityReport_button = (Button) findViewById(R.id.viewPurityReport_button);
+        Button viewPurityReport_button = (Button) findViewById(R.id.view_purity_reports);
         viewPurityReport_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +55,7 @@ public class ReportsActivity extends AppCompatActivity {
             }
         });
 
-        Button graph_button = (Button) findViewById(R.id.graph_button);
+        Button graph_button = (Button) findViewById(R.id.historical_report);
         graph_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
